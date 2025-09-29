@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Mini-Citation Network — Haptic Atlas</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <span class="badge">CDP · Mapping Ideas</span>
+    <h1>Mini-Citation Network: Sensory Substitution × GenAI × Data Justice</h1>
+  </header>
+
+  <div id="canvas-wrap" aria-label="Interactive citation network canvas"></div>
+
+  <aside aria-live="polite">
+    <div class="card">
+      <div id="noteTitle">Click a node or edge</div>
+      <div id="noteType">Hint</div>
+      <div id="note">
+        Drag nodes. Click edges for overlaps, tensions, or gaps.
+        ⌘/Ctrl + click a node to open its link. Press “H” for help.
+      </div>
+      <div id="extLink"></div>
+    </div>
+
+    <div class="card">
+      <div class="legendTitle">Legend</div>
+      <div id="legend">
+        <div class="pill"><span class="dot overlap"></span>Overlap</div>
+        <div class="pill"><span class="dot tension"></span>Tension</div>
+        <div class="pill"><span class="dot method"></span>Method/Tool</div>
+        <div class="pill"><span class="dot gap"></span>Gap</div>
+      </div>
+    </div>
+
+    <div class="card small">
+      <b>Shortcuts</b> — H: help • R: reset • G: toggle gaps •
+      Right-click canvas → Save image
+    </div>
+  </aside>
+
+  <footer>
+    <div>Nodes include core readings and their citation satellites.</div>
+    <div>Built with <a href="https://p5js.org/" target="_blank" rel="noopener">p5.js</a></div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/p5@1.9.3/lib/p5.min.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
